@@ -1,30 +1,30 @@
-# GitWithCoffee
+# ☕ GitWithCoffee
 Repositório utilizado para aprender os comandos básicos Git!
 
 
-## O que é o GIT?
+## 📜 O que é o GIT?
 
 É um sistema de controlo de versões distribuído, muito usado na programação e desenvolvimento de software. Ele permite que programadores e equipas de desenvolvimento colaborem em projetos, rastreando mudanças no código-fonte de forma eficiente e segura.
 
-## O que é o GitHub?
+## 🌐 O que é o GitHub?
 
 É uma plataforma de hospedagem de código que utiliza o Git como sistema de controlo de versões. Foi criada para facilitar o trabalho colaborativo de desenvolvimento de software, fornecendo ferramentas que tornam o processo de desenvolvimento mais acessível e organizado.
 
-## O que é um repositório?
+## 📁 O que é um repositório?
 
 Local onde é armazenado e gerido o código-fonte. Contém também todo o histórico de mudanças feitas nesses ficheiros ao longo do tempo.
 
-## O que é um Commit?
+## 💾 O que é um Commit?
 
 É uma operação no Git que guarda um snapshot do estado atual dos ficheiros num repositório. Basicamente, regista as mudanças feitas aos ficheiros desde o último commit, incluindo adições, modificações ou eliminações de ficheiros.
 
-## O que é um Branch?
+## 🌿 O que é um Branch?
 
 Um branch é uma linha separada de desenvolvimento dentro de um repositório Git. Os branches permitem que os programadores trabalhem em diferentes funcionalidades, correções de erros, ou experimentos de forma isolada do código principal.
 
 ---
 
-## Já com o Git instalado…
+## 🚀 Já com o Git instalado…
 
 - `git config --global --list` : Comando para listar as configs atuais
 - `git config --global user.name “O MEU NOME”` : Comando para colocar o nome que irá aparecer no Git
@@ -32,7 +32,7 @@ Um branch é uma linha separada de desenvolvimento dentro de um repositório Git
 
 ---
 
-## Comandos auxiliares da Linha de Comandos:
+## 🛠️ Comandos auxiliares da Linha de Comandos:
 
 - `ls` : Lista os ficheiros e diretórios no diretório atual
 - `cd` : Muda para o diretório especificado
@@ -47,13 +47,13 @@ Um branch é uma linha separada de desenvolvimento dentro de um repositório Git
 
 ---
 
-## Criar repositório:
+## 📂 Criar repositório:
 
 Utilizar o comando `git init` na pasta pretendida.
 
 ---
 
-## Colocando arquivos no stage:
+## 📌 Colocando arquivos no stage:
 
 Colocar um arquivo no stage significa preparar esse ficheiro para o próximo commit, selecionando quais mudanças feitas nos ficheiros do projeto serão incluídas. A staging área é um espaço intermediário onde se pode adicionar e organizar as alterações antes de as guardar permanentemente no repositório com um commit.
 
@@ -63,14 +63,14 @@ Colocar um arquivo no stage significa preparar esse ficheiro para o próximo com
 
 ---
 
-## Realizar o commit:
+## 📝 Realizar o commit:
 
 - `git commit -m “MENSAGEM DO COMMIT”`
 - `git log` : Comando para ver o histórico dos commits.
 
 ---
 
-## Desfazer o commit:
+## ♻️ Desfazer o commit:
 
 - **Checkout**: Muda a área de trabalho para uma versão específica de um commit ou para um branch diferente. Usado para navegar entre branches ou commits. Não altera o histórico de commits; é mais usado para visualizar ou temporariamente voltar a um estado anterior.
   - `git checkout NOME DO COMMIT/BRANCH`
@@ -90,13 +90,13 @@ Colocar um arquivo no stage significa preparar esse ficheiro para o próximo com
 
 ---
 
-## Ignorar ficheiros/pastas:
+## 🚫 Ignorar ficheiros/pastas:
 
 Para ignorar ficheiros ou pastas no Git, usa-se um ficheiro chamado `.gitignore`. O ficheiro lista padrões de nomes de ficheiros e pastas que não devem ser incluídos no controlo de versões, evitando que sejam adicionados ao stage ou ao repositório.
 
 ---
 
-## Criar branches:
+## 🌱 Criar branches:
 
 - `git branch` : Comando para consultar os branches criados
 - `git branch NOME DO BRANCH` : Cria o branch
@@ -105,7 +105,7 @@ Para ignorar ficheiros ou pastas no Git, usa-se um ficheiro chamado `.gitignore`
 
 ---
 
-## Fazer o merge:
+## 🔀 Fazer o merge:
 
 Para realizar um merge temos de estar SEMPRE no branch de destino! Dentro do branch de destino executar o comando:
 
@@ -117,13 +117,13 @@ Podemos verificar o histórico dos commits e como os merges se integraram com o 
 
 ---
 
-## Comunicar com o GitHub:
+## 📡 Comunicar com o GitHub:
 
 Inicialmente é necessário associar uma chave SSH ao GitHub!
 
 - `git push LINK_DO_REPOSITORIO_NO_GIT_HUB master` : Comando usado para enviar as mudanças do branch local, neste caso o master, para o branch do repositório remoto.
 
-### Primeiro Problema notado:
+### ⚠️ Primeiro Problema notado:
 
 Localmente o branch principal do Git chama-se `master` mas no GitHub chama-se `main`.
 
@@ -132,7 +132,7 @@ Localmente o branch principal do Git chama-se `master` mas no GitHub chama-se `m
 - Utilizar o comando `git push LINK_DO_REPOSITORIO_NO_GIT_HUB --delete master` para apagar a referência ao branch antigo master.
 - Utilizar o comando `git push -u LINK_DO_REPOSITORIO_NO_GIT_HUB main` para definir o novo branch.
 
-### Segundo Problema notado:
+### ⚠️ Segundo Problema notado:
 
 O repositório Git local foi criado numa data e o repositório Git remoto foi criado em outra data e por esse motivo estava a entrar em conflito na hora do push. O problema foi resolvido efetuando um pull antes do push com o comando:
 
@@ -142,6 +142,11 @@ Para resolver o facto de ter que se usar sempre o link do repositório do GitHub
 
 - `git remote add origin SSH_DO_REPOSITORIO` e `git remote -v` para confirmar as alterações.
 
-Assim sendo, para comandos futuros já podemos realizar utilizando o origin, por exemplo:
+Assim sendo, para comandos futuros já podemos fazer uso do origin, por exemplo:
 
 - `git push origin main`
+
+#### 🔮 Em projetos futuros
+
+Com isto, concluímos que, em projetos futuros, o aconselhado será criar o repositório no GitHub e utilizar o comando `git clone SSH_DO_REPOSITORIO_GITHUB` para "puxar" o repositório para a nossa área pessoal.
+
